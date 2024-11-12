@@ -1,0 +1,223 @@
+/* Reset Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #fbe0e6; /* Pastel pink background */
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 100px; /* For footer spacing */
+}
+h2 {
+    color: #f48fb1; /* Soft pastel pink for headings */
+ 
+}
+
+/* Main Container Styling */
+.container-satu {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Container */
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.kolom-utama {
+    flex: 3;
+    padding: 20px;
+    background-color: #fff4f7; /* Lighter pink background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Styling */
+.sidebur-satu, .sidebur-dua {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebur-satu:hover, .sidebur-dua:hover {
+    transform: translateY(-5px);
+}
+
+.sidebur-satu h3, .sidebur-dua h3 {
+    color: #f48fb1; /* Soft pastel pink for headings */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.sidebur-satu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebur-satu ul li {
+    margin: 8px 0;
+}
+
+.sidebur-satu ul li a {
+    text-decoration: none;
+    color: #f48fb1; /* Pastel pink links */
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebur-satu ul li a:hover {
+    color: #f06292; /* Darker pink on hover */
+}
+
+/* Service Section Styling */
+.container-dua {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.layanan {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    flex: 1 1 30%;
+}
+
+.layanan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery Container */
+.container-tiga {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Thumbnail Styling */
+.thumbnail {
+    flex: 1 1 23%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail .text {
+    position: absolute; /* Positioning text on top of the image */
+    top: 50%; /* Vertical center */
+    left: 50%; /* Horizontal center */
+    transform: translate(-50%, -50%); /* Center the text exactly */
+    font-size: 1.2rem; /* Slightly larger font */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(82, 75, 75, 0.5); /* Text shadow for better visibility */
+    padding: 10px;
+    background-color: rgba(247, 167, 192, 0.7); /* Soft pink background for the text */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.4s ease-in-out;
+    border: 2px solid #f48fb1; /* Soft pink border */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.thumbnail img:hover {
+    transform: scale(1.1); 
+}
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 768px) {
+    .container-satu {
+        display: flex;
+    }
+
+    .sidebar-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-tiga {
+        justify-content: space-between;
+    }
+
+    .thumbnail {
+        flex: 1 1 23%; 
+    }
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 767px) {
+    .container-satu {
+        flex-direction: column;
+    }
+
+    .thumbnail {
+        flex: 1 1 48%; 
+    }
+}
+
+/* Extra small screen (mobile portrait) */
+@media (max-width: 480px) {
+    .thumbnail {
+        flex: 1 1 100%; 
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f48fb1; /* Pastel pink footer */
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
